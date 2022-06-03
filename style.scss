@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.todo-list{
+    display: inline;
+    .todo-item-container{
+        background-color: rgba(255, 181, 181, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        padding: .2rem .5rem;
+        margin-bottom: .5rem;
+        transition: all .4s;
+        border-radius: .2rem;
+
+        .todo-item{
+            list-style: none;
+            margin: 0 auto 0 .5rem;
+            padding: 0 .5rem;
+            border-left: 1px solid black;
+        }
+        button[class="delete"]{
+            border: none;
+            border-left: 1px solid black;
+            padding-left: .4rem;
+            outline: none;
+            color: #ff5b5b;
+            background-color: unset;
+            cursor: default;
+
+            :hover{
+                color: #ff0000;
+            }
+
+            >i{
+                cursor: pointer;
+            }
+        }
+        button[class="check"]{
+            border: none;
+            cursor: default;
+            outline: none;
+            color: green;
+            background-color: unset;
+            
+            :hover{
+                color: rgb(0, 183, 0);
+            }
+
+            >i{
+                cursor: pointer;
+            }
+        }
+        .checkedItem{
+            text-decoration: line-through;
+            opacity: 50%;
+        }
+    }
+}
+.deleteAnimation{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0 !important;
+    transition: .5s;
+}
+#selectFilter{
+    background-color: rgb(255, 213, 116);
+    z-index: 100456400;
+    position: relative;
+}
+#changeSelect{
+    background-color: rgb(238, 196, 129);
+    bottom: 0;
+    right: -9.5px;
+    height: 1.3rem;
+    width: 5rem;
+    font-size: .7rem;
+    z-index: 0;
+    box-shadow: .2rem 0rem .0rem gold;
+    transition: all .3s;
+    animation: noticeMe 1.5s .3s;
+
+}
+#changeSelect:hover{
+    right: -72px;
+}
+#changeSelectText{
+    // display: none;
+    font-size: .7rem;
+}
+.done{
+    background-color: rgba(103, 255, 116, 0.502) !important;
+}
+.hide{
+    display: none;
+}
+.unHide{
+    display: flex;
+}
+@keyframes noticeMe {
+    0%{right: -9.5px;}
+    15%{right: -14px;}
+    50%{right: 0;}
+    100%{right: -9.5px;}
+}
+

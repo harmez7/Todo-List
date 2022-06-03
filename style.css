@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.todo-list {
+  display: inline;
+}
+
+.todo-list .todo-item-container {
+  background-color: rgba(255, 181, 181, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: .2rem .5rem;
+  margin-bottom: .5rem;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  border-radius: .2rem;
+}
+
+.todo-list .todo-item-container .todo-item {
+  list-style: none;
+  margin: 0 auto 0 .5rem;
+  padding: 0 .5rem;
+  border-left: 1px solid black;
+}
+
+.todo-list .todo-item-container button[class="delete"] {
+  border: none;
+  border-left: 1px solid black;
+  padding-left: .4rem;
+  outline: none;
+  color: #ff5b5b;
+  background-color: unset;
+  cursor: default;
+}
+
+.todo-list .todo-item-container button[class="delete"] :hover {
+  color: #ff0000;
+}
+
+.todo-list .todo-item-container button[class="delete"] > i {
+  cursor: pointer;
+}
+
+.todo-list .todo-item-container button[class="check"] {
+  border: none;
+  cursor: default;
+  outline: none;
+  color: green;
+  background-color: unset;
+}
+
+.todo-list .todo-item-container button[class="check"] :hover {
+  color: #00b700;
+}
+
+.todo-list .todo-item-container button[class="check"] > i {
+  cursor: pointer;
+}
+
+.todo-list .todo-item-container .checkedItem {
+  text-decoration: line-through;
+  opacity: 50%;
+}
+
+.deleteAnimation {
+  -webkit-transform: translateY(8rem) rotateZ(20deg);
+          transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0 !important;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#selectFilter {
+  background-color: #ffd574;
+  z-index: 100456400;
+  position: relative;
+}
+
+#changeSelect {
+  background-color: #eec481;
+  bottom: 0;
+  right: -9.5px;
+  height: 1.3rem;
+  width: 5rem;
+  font-size: .7rem;
+  z-index: 0;
+  -webkit-box-shadow: .2rem 0rem .0rem gold;
+          box-shadow: .2rem 0rem .0rem gold;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-animation: noticeMe 1.5s .3s;
+          animation: noticeMe 1.5s .3s;
+}
+
+#changeSelect:hover {
+  right: -72px;
+}
+
+#changeSelectText {
+  font-size: .7rem;
+}
+
+.done {
+  background-color: rgba(103, 255, 116, 0.502) !important;
+}
+
+.hide {
+  display: none;
+}
+
+.unHide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@-webkit-keyframes noticeMe {
+  0% {
+    right: -9.5px;
+  }
+  15% {
+    right: -14px;
+  }
+  50% {
+    right: 0;
+  }
+  100% {
+    right: -9.5px;
+  }
+}
+
+@keyframes noticeMe {
+  0% {
+    right: -9.5px;
+  }
+  15% {
+    right: -14px;
+  }
+  50% {
+    right: 0;
+  }
+  100% {
+    right: -9.5px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
